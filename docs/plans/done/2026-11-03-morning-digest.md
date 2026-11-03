@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-03
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| Issue | Source section | Dependencies | Worker (harness · model · effort) |
+|-------|----------------|--------------|-----------------------------------|
+| [#1 Run log reader](https://github.com/grzehow/mega-s01e04-rig/issues/1) | §1 | None; types-only commit unblocks §2 | pi · openai/gpt-6.1-sol · high |
+| [#2 Digest HTML page](https://github.com/grzehow/mega-s01e04-rig/issues/2) | §2a | #1 types for implementation; reader for verification | pi · openai/gpt-6.1-sol · medium |
+| [#3 Digest JSON endpoint](https://github.com/grzehow/mega-s01e04-rig/issues/3) | §2b | #1 types for implementation; reader and #2 for parity verification | pi · openai/gpt-6.1-sol · low |
+| [#4 Status board digest links](https://github.com/grzehow/mega-s01e04-rig/issues/4) | §2c | #1 types for implementation; reader and #2 for verification | pi · openai/gpt-6.1-sol · low |
+| [#5 Digest route tests](https://github.com/grzehow/mega-s01e04-rig/issues/5) | §2d | #1 types for authoring; #2 and #3 for final verification | pi · openai/gpt-6.1-sol · medium |
+| [#6 Public review preview](https://github.com/grzehow/mega-s01e04-rig/issues/6) | §3 | #1–#5 and separate human publication approval | pi · openai/gpt-6.1-sol · medium |
+| [#7 Preview cleanup and plan archive](https://github.com/grzehow/mega-s01e04-rig/issues/7) | §4 | #6 review received and separate human cleanup approval | pi · openai/gpt-6.1-sol · low |
+
+Worker details for #1–#6 come from their GitHub closing records; #7 records the archive
+worker. GitHub is the source of issue state.
