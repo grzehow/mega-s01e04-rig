@@ -1,5 +1,10 @@
 node_modules
 var/
 .env
+.env.*
+!.env.example
 *.png
 .claude/skills
+/.challenge/
+/.limen/
+/.wrangler/
